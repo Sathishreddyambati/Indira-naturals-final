@@ -11,9 +11,9 @@ import ShineLogo from "@/components/ShineLogo";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
-  { href: "/why-us", label: "Why" },
-  { href: "/our-story", label: "About" },
-  { href: "/contact-us", label: "Contact" },
+  { href: "/why-us", label: "Why us" },
+  { href: "/our-story", label: "About us" },
+  { href: "/contact", label: "Contact us" },
 ];
 
 export default function Navbar() {
