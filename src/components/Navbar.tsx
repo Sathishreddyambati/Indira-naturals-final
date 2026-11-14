@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { href: "/shop", label: "Shop" },
   { href: "/why-us", label: "Why" },
   { href: "/our-story", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact-us", label: "Contact" },
 ];
 
 export default function Navbar() {
