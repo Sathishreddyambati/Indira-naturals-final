@@ -19,7 +19,10 @@ export async function POST(req: Request) {
   if (!parsed.success) {
     return NextResponse.json({ error: "Please provide a valid order number and email" }, { status: 400 });
   }
-  const order = await getOrder(parsed.data.orderNumber.toUpperCase());
+    // Accept "IN-20261114-9724", "20261114-9724" or lowercase / with spaces.
+  let num = parsed.data.orderNumber.toUpperCase().replace(/\s+/g, "");
+  if (!num.startsWith("IN-")) num = `IN-${num}`;
+  const order = await getOrder(num);
   if (!order || order.email.toLowerCase() !== parsed.data.email.toLowerCase()) {
     return NextResponse.json({ error: "No matching order found. Check your order number and email." }, { status: 404 });
   }
