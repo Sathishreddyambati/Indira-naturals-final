@@ -35,3 +35,8 @@ export function getSiteUrl(req?: Request): string {
   if (v) return `https://${v}`;
   return (env || "http://localhost:3000").replace(/\/$/, "");
 }
+
+/** Secret customer tracking link: no email needed, works only with the signed key. */
+export function buildTrackUrl(base: string, orderNumber: string): string {
+  return `${base}/track/${encodeURIComponent(orderNumber)}?k=${signOrder(orderNumber)}`;
+}
