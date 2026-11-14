@@ -6,7 +6,7 @@ import BrandIcon from "@/components/BrandIcon";
 import { BENEFITS, CONTACT, PACK_FACTS, TAGLINE, WHY_WE_STARTED, YIELD_GUIDE } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About",
   description:
     "The Indira Naturals story: why we started making pure ginger and garlic powders, the main benefits, and information about our packs and yield.",
   alternates: { canonical: "/our-story" },
