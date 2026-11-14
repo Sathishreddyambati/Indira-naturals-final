@@ -1,0 +1,20 @@
+Firestore security rules for the Indira Naturals collections
+============================================================
+The website reads/writes Firestore ONLY from the server (Firebase Admin SDK, which ignores rules),
+so the browser must never be allowed to touch these collections.
+
+Your Firebase project "secondbrain-87cd7" also holds other data (memories, users). Do NOT replace your
+whole rules file. Open Firestore -> Rules and ADD this block inside `match /databases/{database}/documents { ... }`:
+
+    match /indira_admins/{doc}    { allow read, write: if false; }
+    match /indira_products/{doc}  { allow read, write: if false; }
+    match /indira_orders/{doc}    { allow read, write: if false; }
+    match /indira_customers/{doc} { allow read, write: if false; }
+    match /indira_coupons/{doc}   { allow read, write: if false; }
+    match /indira_settings/{doc}  { allow read, write: if false; }
+    match /indira_reviews/{doc}   { allow read, write: if false; }
+    match /indira_messages/{doc}  { allow read, write: if false; }
+    match /indira_newsletter/{doc}{ allow read, write: if false; }
+    match /indira_counters/{doc}  { allow read, write: if false; }
+
+Then press Publish.

@@ -1,0 +1,189 @@
+// Starter catalogue (loaded once from Admin -> Products -> "Load starter products").
+
+export type SeedProduct = {
+  slug: string;
+  name: string;
+  shortDescription: string;
+  description: string;
+  category: string;
+  image: string;
+  gallery: string[];
+  ingredients: string;
+  netWeightLabel: string;
+  usage: string;
+  storage: string;
+  allergen: string | null;
+  skuPrefix: string;
+  featured: boolean;
+  bestseller: boolean;
+  variants: { label: string; grams: number; price: number; compare?: number; stock: number }[];
+};
+
+const STORAGE =
+  "Store in a cool, dry place. Keep away from moisture and sunlight. Always use a dry spoon. Best before 12 months from the date of manufacturing.";
+
+// Prices confirmed by Indira Naturals (price list, Nov 2026).
+export const seedProducts: SeedProduct[] = [
+  {
+    slug: "ginger-powder",
+    name: "Ginger Powder",
+    shortDescription: "100% pure ginger powder. No preservatives, no additives.",
+    description:
+      "Our Ginger Powder is made from carefully selected fresh ginger roots and finely processed to retain its natural aroma, flavour and nutrients. We dry the raw ginger until the water is gone, so no preservatives are needed — the powder keeps the real taste of fresh ginger.",
+    category: "Powders",
+    image: "/images/products/ginger-pouch-front.jpg",
+    gallery: [
+      "/images/products/ginger-pouch-front.jpg",
+      "/images/products/ginger-pouch-back.jpg",
+      "/images/products/ginger-front-back.jpg",
+      "/images/products/ginger-pouch-combined.jpg",
+      "/images/products/ginger-benefits.jpg",
+    ],
+    ingredients: "100% Ginger",
+    netWeightLabel: "Available in 100 g, 150 g, 200 g, 250 g, 500 g & 1 kg zip-lock pouches",
+    usage:
+      "Add a spoon directly to curries, soups, marinades, sauces, tea and spice blends — no peeling or grating needed. 1 kg of raw ginger makes about 100 g of powder, so a little goes a long way.",
+    storage: STORAGE,
+    allergen: null,
+    skuPrefix: "IN-GIN",
+    featured: true,
+    bestseller: true,
+    variants: [
+      { label: "100g", grams: 100, price: 270, stock: 80 },
+      { label: "150g", grams: 150, price: 405, stock: 60 },
+      { label: "200g", grams: 200, price: 540, stock: 60 },
+      { label: "250g", grams: 250, price: 675, stock: 50 },
+      { label: "500g", grams: 500, price: 1350, stock: 40 },
+      { label: "1kg", grams: 1000, price: 2700, stock: 20 },
+    ],
+  },
+  {
+    slug: "garlic-powder",
+    name: "Garlic Powder",
+    shortDescription: "100% pure garlic powder with a strong, natural aroma.",
+    description:
+      "Our Garlic Powder is made from fresh garlic cloves, hygienically processed and finely ground to retain its strong aroma, flavour and natural goodness. Made only by drying — no preservatives and no additives.",
+    category: "Powders",
+    image: "/images/products/garlic-pouch-front.jpg",
+    gallery: [
+      "/images/products/garlic-pouch-front.jpg",
+      "/images/products/garlic-pouch-back.jpg",
+      "/images/products/garlic-front-back.jpg",
+      "/images/products/garlic-pouch-combined.jpg",
+      "/images/products/garlic-benefits.jpg",
+    ],
+    ingredients: "100% Garlic",
+    netWeightLabel: "Available in 100 g, 150 g, 200 g, 250 g, 500 g & 1 kg zip-lock pouches",
+    usage:
+      "Add a spoon to curries, dals, soups, marinades, dry rubs and sauces — no peeling or crushing needed. 1 kg of raw garlic makes about 200 g of powder.",
+    storage: STORAGE,
+    allergen: null,
+    skuPrefix: "IN-GAR",
+    featured: true,
+    bestseller: true,
+    variants: [
+      { label: "100g", grams: 100, price: 230, stock: 90 },
+      { label: "150g", grams: 150, price: 345, stock: 60 },
+      { label: "200g", grams: 200, price: 460, stock: 60 },
+      { label: "250g", grams: 250, price: 575, stock: 50 },
+      { label: "500g", grams: 500, price: 1150, stock: 40 },
+      { label: "1kg", grams: 1000, price: 2300, stock: 20 },
+    ],
+  },
+  {
+    slug: "garlic-ginger-powder",
+    name: "Ginger Garlic Powder",
+    shortDescription: "A perfect blend of ginger & garlic — paste taste without the effort.",
+    description:
+      "A perfect blend of ginger and garlic, carefully processed to save your time in cooking while bringing you the natural aroma, taste and health benefits. Ginger garlic paste takes time to make; this powder is ready when you are, with nothing added.",
+    category: "Blends",
+    image: "/images/products/ginger-garlic-pouch-front.jpg",
+    gallery: [
+      "/images/products/ginger-garlic-pouch-front.jpg",
+      "/images/products/ginger-garlic-pouch-back.jpg",
+      "/images/products/ginger-garlic-front-back.jpg",
+      "/images/products/ginger-garlic-pouch-combined.jpg",
+      "/images/products/ginger-garlic-benefits.jpg",
+    ],
+    ingredients: "Ginger, Garlic",
+    netWeightLabel: "Available in 100 g, 200 g, 500 g & 1 kg zip-lock pouches",
+    usage:
+      "Use in place of ginger garlic paste. Add a spoon at the start of cooking for curries, biryani, stir-fries, soups and marinades. Use only what you need — handy for weekly cooking.",
+    storage: STORAGE,
+    allergen: null,
+    skuPrefix: "IN-GGB",
+    featured: true,
+    bestseller: true,
+    variants: [
+      { label: "100g", grams: 100, price: 300, stock: 60 },
+      { label: "200g", grams: 200, price: 600, stock: 50 },
+      { label: "500g", grams: 500, price: 1300, stock: 30 },
+      { label: "1kg", grams: 1000, price: 2600, stock: 15 },
+    ],
+  },
+  {
+    slug: "onion-powder",
+    name: "Onion Powder",
+    shortDescription: "100% pure onion powder. No chopping, no tears, nothing added.",
+    description:
+      "Made from carefully selected fresh onions, sourced and processed to retain their natural goodness, taste and aroma. No preservatives, no artificial colours or chemicals — just pure onion, dried and finely ground. Pure, hygienic and full of nature's goodness for your healthy lifestyle.",
+    category: "Powders",
+    image: "/images/products/onion-pouch-front.jpg",
+    gallery: [
+      "/images/products/onion-pouch-front.jpg",
+      "/images/products/onion-pouch-back.jpg",
+      "/images/products/onion-front-back.jpg",
+      "/images/products/onion-pouch-combined.jpg",
+      "/images/products/onion-benefits.jpg",
+    ],
+    ingredients: "Onion Powder",
+    netWeightLabel: "Available in 100 g, 200 g, 500 g & 1 kg zip-lock pouches",
+    usage:
+      "Add to your favourite recipes, curries, soups, marinades, sauces and spice blends — no peeling, chopping or crying. 1 kg of raw onion makes about 200 g of powder.",
+    storage:
+      "Store in a cool, dry and hygienic place. Keep away from direct sunlight and moisture. Close the pouch tightly after every use. Use a clean, dry spoon. Best before 12 months from manufacture.",
+    allergen: null,
+    skuPrefix: "IN-ONI",
+    featured: true,
+    bestseller: false,
+    variants: [
+      { label: "100g", grams: 100, price: 200, stock: 95 },
+      { label: "200g", grams: 200, price: 370, stock: 60 },
+      { label: "500g", grams: 500, price: 750, stock: 40 },
+      { label: "1kg", grams: 1000, price: 1300, stock: 20 },
+    ],
+  },
+  {
+    slug: "tomato-powder",
+    name: "Tomato Powder",
+    shortDescription: "100% pure tomato powder with natural tangy flavour.",
+    description:
+      "Made from carefully selected fresh tomatoes, sourced and processed to retain their natural goodness, tangy taste and aroma. No preservatives, no artificial colours or chemicals — just pure tomato, dried and finely ground. Pure, hygienic and full of nature's goodness for your healthy lifestyle.",
+    category: "Powders",
+    image: "/images/products/tomato-pouch-front.jpg",
+    gallery: [
+      "/images/products/tomato-pouch-front.jpg",
+      "/images/products/tomato-pouch-back.jpg",
+      "/images/products/tomato-front-back.jpg",
+      "/images/products/tomato-pouch-combined.jpg",
+      "/images/products/tomato-benefits.jpg",
+    ],
+    ingredients: "Tomato Powder",
+    netWeightLabel: "Available in 100 g, 200 g, 500 g & 1 kg zip-lock pouches",
+    usage:
+      "Add to your favourite recipes, curries, soups, sauces, gravies and spice blends — no washing, cutting or pureeing. 1 kg of raw tomato makes about 200 g of powder.",
+    storage:
+      "Store in a cool, dry and hygienic place. Keep away from direct sunlight and moisture. Close the pouch tightly after every use. Use a clean, dry spoon. Best before 12 months from manufacture.",
+    allergen: null,
+    skuPrefix: "IN-TOM",
+    featured: true,
+    bestseller: false,
+    variants: [
+      { label: "100g", grams: 100, price: 230, stock: 70 },
+      { label: "200g", grams: 200, price: 390, stock: 50 },
+      { label: "500g", grams: 500, price: 760, stock: 35 },
+      { label: "1kg", grams: 1000, price: 1400, stock: 20 },
+    ],
+  },
+];
+
