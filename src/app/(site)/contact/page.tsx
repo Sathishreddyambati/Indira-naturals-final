@@ -5,7 +5,7 @@ import { Accordion } from "@/components/Accordion";
 import { CONTACT } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact",
   description: "Got a question? Get in touch with Indira Naturals by phone, email or WhatsApp.",
   alternates: { canonical: "/contact" },
 };
