@@ -8,7 +8,7 @@ import VideosSection from "@/components/home/VideosSection";
 import { BENEFITS, CERTIFICATES } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Why Us",
+  title: "Why",
   description:
     "Why choose Indira Naturals: 100% pure ginger and garlic powders made only by drying, no preservatives, certified and with video proof of how we make it.",
   alternates: { canonical: "/why-us" },
